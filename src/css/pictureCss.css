@@ -41,6 +41,42 @@
     background-color: RGBA(0, 0, 0, 0.3);
     cursor: pointer;
 }
+
+.picture_find{
+    position: absolute;
+    top: 65%;
+    z-index: 2;
+    width: 34%;
+    height: 10%;
+    background-color: RGBA(0, 0, 0, 0.6);
+    border-radius: 5px;
+    left: 33%;
+}
+
+.picture_input{
+    width: 80%;
+    margin-left: 3%;
+    height: 50%;
+    border: none;
+    outline:medium;
+    border-radius: 5px;
+    margin-top: 3.5%;
+    padding-left: 2%;
+    font-size: 18px;
+}
+
+.picture_button{
+    width: 12%;
+    border: none;
+    outline:medium;
+    height: 50%;
+    margin-left: 2%;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #FF9D00;
+    color: white;
+}
+
 #container:hover .arrow {
     display: block;
 }

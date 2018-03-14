@@ -61,7 +61,7 @@
 .onclickStyle{
     color: white;
     border-bottom:2px solid #FF9D00;
-    background-color:#FF9D00;
+    background-color: #FF9D00;
 }
 
 .overStyle{
@@ -100,10 +100,17 @@
     float: left;
     font-size: 14px;
     border-radius: 0 5px 5px 0;
-    background-color: #EFEFEF;
+    background-color: #DDDDDD;
 }
 
 .title_button:hover{
-    background-color: #DDDDDD;
     cursor: pointer;
+}
+
+.inline{
+    transition:width 1s;
+}
+
+.none{
+    width: 0%;
 }

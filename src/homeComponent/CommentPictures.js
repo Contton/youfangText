@@ -63,6 +63,9 @@ class CommentPictures extends React.Component{
                     <li className={this.state.index === 2 ? show : hidden}><img src={img11}/></li>
                     <li className={this.state.index === 3 ? show : hidden}><img src={img12}/></li>
                 </ul>
+                <div className="picture_find">
+                    <input className="picture_input" type="text"/><input value="搜索" className="picture_button" type="button"/>
+                </div>
                 <div id="prev" class="arrow" onClick={this.clickLast.bind(this)}>&lt;</div>
                 <div id="next" class="arrow" onClick={this.clickNext.bind(this)}>&gt;</div>
             </div>
