@@ -65,7 +65,7 @@ class CommentContent extends React.Component{
                             <div className="travels_one">
                                 <div className="one_picture"><img src={img6}/></div>
                                 <div className="one_title">沁心之蓝，漫步“费城”@土耳其费特希耶</div>
-                                <div className="one_content">此“费城”非彼费城。这里说的“费城”并不是美国著名的费城，而是土耳其南部一个名叫费特希耶（Fethiye）的小镇。 一个“死海”边上的，蓝的沁人心脾的小镇。离开费特希耶，久久不能忘记。 那蓝色，那片海，那片天。 那温和，那阳光，那清风。</div>
+                                <div className="one_content">此“费城”非彼费城。这里说的“费城”并不是美国著名的费城，而是土耳其南部一个名叫费特希耶（Fethiye）的小镇。 一个“死海”边上的，蓝的沁人心脾的小镇。离开费特希耶，久久不能忘记。</div>
                                 <div className="one_traveller">
                                     <div className="one_info">费特希耶</div>
                                     <div className="one_info writer">作者</div>
