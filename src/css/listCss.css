@@ -1,0 +1,93 @@
+.list_all{
+    width: 70%;
+    height: 1000px;
+    margin: auto;
+}
+.list_find{
+    width: 50%;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 25%;
+    border-radius: 20px;
+}
+.list_input{
+    width: 80%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    padding-left: 25px;
+    font-size: 16px;
+    background-color: #e9eeec;
+}
+.list_submit{
+    width: 20%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: #8c8f8d;
+    border-radius: 0 20px 20px 0;
+    font-size: 17px;
+    color: white;
+}
+.list_submit:hover{
+    cursor: pointer;
+    background-color: #606260;
+}
+.list_submit:active{
+    background-color: #494b49;
+}
+.list_one{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #959490;
+}
+.list_one:hover{
+    border: 2px solid #959490;
+    cursor: pointer;
+}
+.list_title{
+    width: 96%;
+    height: 40px;
+    margin-left: 2%;
+    color: #354857;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list_content{
+    width: 94%;
+    margin-left: 3%;
+    color: #959490;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list_picture{
+    margin-top: 5px;
+    width: 96%;
+    height: 80px;
+    margin-left: 2%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list_picture img{
+    height: 100%;
+    margin-left: 1%;
+    box-shadow: 0 0 10px #959490;
+}
+.list_time{
+    width: 40%;
+    height: 30px;
+    margin-top: 3px;
+    margin-left: 3%;
+    color: #959490;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

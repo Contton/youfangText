@@ -1,0 +1,33 @@
+.about_all{
+    width: 100%;
+    height: 160px;
+    background-color: #3C3C3C;
+    margin-top: 5%;
+    padding-top: 1%;
+}
+.about_side{
+    width: 49.75%;
+    height: 90%;
+    float: left;
+}
+.about_middle{
+    width: 0.5%;
+    height: 90%;
+    padding-top: 5%;
+    background-color: #222e38;
+    float: left;
+}
+.about_us{
+    width: 10%;
+    height: 20%;
+    margin-left: 90%;
+    font-size: 16px;
+    font-weight: bold;
+}
+.about_info{
+    width: 10%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 3%;
+}

@@ -1,0 +1,72 @@
+.info_all{
+    width: 70%;
+    margin-left: 15%;
+    height: 800px;
+    margin-top: 70px;
+}
+.info_user{
+    width: 80%;
+    margin-left: 10%;
+    height: 25%;
+}
+.info_picture{
+    width: 15%;
+    padding-top: 15%;
+    height: 70%;
+    margin-left: 10%;
+    border-radius: 50%;
+    background-color: #F9DFC4;
+    float: left;
+}
+.info_picture img{
+    width: 100%;
+}
+.info_content{
+    width: 65%;
+    margin-left: 10%;
+    margin-top: 1%;
+    float: left;
+    color: #364856;
+    font-weight: bold;
+    font-size: 20px;
+}
+.info_part{
+    width: 100%;
+    height: 500px;
+}
+.info_choose{
+    width: 25%;
+    height: 100%;
+    margin-left: 10%;
+    border-right: 5px solid #364856;
+    float: left;
+}
+.info_one{
+    width: 80%;
+    height: 10%;
+    margin-top: 30px;
+    margin-left: 15%;
+    text-align: center;
+    padding-top: 5%;
+    color: #364856;
+    font-size: 20px;
+    border: 1px solid #364856;
+}
+.info_router{
+    width: 55%;
+    height: 90%;
+    margin-top: 30px;
+    margin-left: 20px;
+    float: left;
+    background: linear-gradient(to bottom, #F9DFC4, #ffe4c9);
+}
+.info_one:hover{
+    background-color: #e16164;
+    cursor: pointer;
+}
+.info_one:active{
+    background-color: #CB585B;
+}
+div span{
+    color: #CB585B;
+}
