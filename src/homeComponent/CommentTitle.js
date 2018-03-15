@@ -84,7 +84,7 @@ class ComponentTitle extends Component {
                 <HerderSelect index="5" changeMouserOver={this.changeMouserOver.bind(this)} changeClicked={this.changeClicked.bind(this)} selected={this.state.clicked} mouse_over={this.state.mouse_over} left={true} end={true}>
                     游记</HerderSelect>
                 <div className="title_find" onMouseOver={this.findShow.bind(this)} onMouseOut={this.findHidden.bind(this)}>
-                    <input value="搜索" className="title_button" type="button"/>
+                    <div className="title_button"><img src={img14}/></div>
                     <input className={this.state.find === 1 ? show : hidden} type="text"/>
                 </div>
                 <div className="title_login"><div onClick={this.loginOpen.bind(this)}>登录</div><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><div>注册</div></div>
