@@ -37,7 +37,7 @@
     font-weight: bold;
     line-height: 39px;
     text-align: center;
-    color: #DCC6B1;
+    color: #FF9D00;
     background-color: RGBA(0, 0, 0, 0.3);
     cursor: pointer;
 }
@@ -75,6 +75,10 @@
     font-size: 18px;
     background-color: #FF9D00;
     color: white;
+}
+
+.picture_button{
+    cursor: pointer;
 }
 
 #container:hover .arrow {

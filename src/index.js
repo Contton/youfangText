@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import './css/titleCss.css';
 import './css/pictureCss.css';
-import './css/popularCss.css';
+import './css/contentCss.css';
 import './css/infoCss.css';
 import './css/registerCss.css';
 import './css/listCss.css';

@@ -1,5 +1,10 @@
+.content{
+    width: 1360px;
+    margin: 0 auto;
+}
+
 .content_all{
-    width: 53%;
+    width: 75%;
     height: 1000px;
     margin: 0 auto;
 }

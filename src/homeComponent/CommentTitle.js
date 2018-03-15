@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HerderSelect from './ComponentTitleSelect';
 import img13 from '../images/13.jpg';
+import img14 from '../images/14.jpg';
 import classNames from 'classnames/bind';
 
 import styles from '../css/titleCss.css';
@@ -13,7 +14,8 @@ class ComponentTitle extends Component {
         this.state = {
             mouse_over:'0',
             clicked:'1',
-            find: 0
+            find: 0,
+            login:0
         };
     }
 
@@ -25,24 +27,47 @@ class ComponentTitle extends Component {
         this.setState({mouse_over:index});
     }
 
-    findShow(){
+    findShow(e){
        this.setState({find:1});
+       e.stopPropagation();
     }
 
     findHidden(){
         this.setState({find:0});
     }
 
+    loginOpen(){
+        this.setState({login:1});
+    }
+
+    loginClose(){
+        this.setState({login:0});
+    }
+
     render() {
         let show = style({
             title_input:true,
             inline:true,
-            none:false
+            none:false,
         });
         let hidden = style({
             inline:false,
             title_input:true,
-            none:true
+            none:true,
+        })
+        let loginShow = style({
+            login_show:true,
+            login_all:true,
+        })
+        let loginHidden = style({
+            login_show:false,
+            login_all:true,
+        })
+        let backShow = style({
+            login:true
+        })
+        let backHidden = style({
+            login:false
         })
         return (
             //color: #FF9D00;
@@ -59,10 +84,18 @@ class ComponentTitle extends Component {
                 <HerderSelect index="5" changeMouserOver={this.changeMouserOver.bind(this)} changeClicked={this.changeClicked.bind(this)} selected={this.state.clicked} mouse_over={this.state.mouse_over} left={true} end={true}>
                     游记</HerderSelect>
                 <div className="title_find" onMouseOver={this.findShow.bind(this)} onMouseOut={this.findHidden.bind(this)}>
-                    <input className={this.state.find === 1 ? show : hidden} type="text"/>
                     <input value="搜索" className="title_button" type="button"/>
+                    <input className={this.state.find === 1 ? show : hidden} type="text"/>
                 </div>
-                <div className="title_login"><div>登录</div><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><div>注册</div></div>
+                <div className="title_login"><div onClick={this.loginOpen.bind(this)}>登录</div><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><div>注册</div></div>
+                <div className={this.state.login === 1 ? backShow : backHidden}></div>
+                <div className={this.state.login === 1 ? loginShow : loginHidden}>
+                    <input className="login_text" type="text" placeholder="请输入邮箱/电话"/>
+                    <input className="login_text" type="password" placeholder="请输入密码"/>
+                    <div className="login_forget">忘记密码？</div>
+                    <input onClick={this.loginClose.bind(this)} className="login_button" type="button" value="关闭"/>
+                    <input className="login_button login_ok" type="button" value="登录"/>
+                </div>
             </div>
         );
     }

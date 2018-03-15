@@ -12,6 +12,7 @@ import img8 from '../images/8.jpg';
 class CommentContent extends React.Component{
     render(){
         return(
+            <div className="content">
             <div className="content_all">
                 <div className="content_left">
                     <div className="content_traveller">
@@ -95,6 +96,7 @@ class CommentContent extends React.Component{
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }
