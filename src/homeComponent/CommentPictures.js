@@ -63,8 +63,8 @@ class CommentPictures extends React.Component{
                     <li className={this.state.index === 2 ? show : hidden}><img src={img11}/></li>
                     <li className={this.state.index === 3 ? show : hidden}><img src={img12}/></li>
                 </ul>
-                <div className="picture_find">
-                    <input className="picture_input" type="text" placeholder="搜索城市，大学，游记，攻略等"/><input value="搜索" className="picture_button" type="button"/>
+                <div className="picture_find radius">
+                    <input className="picture_input radius font18" type="text" placeholder="搜索城市，大学，游记，攻略等"/><input value="搜索" className="picture_button radius font18 color_white background" type="button"/>
                 </div>
                 <div id="prev" class="arrow" onClick={this.clickLast.bind(this)}>&lt;</div>
                 <div id="next" class="arrow" onClick={this.clickNext.bind(this)}>&gt;</div>

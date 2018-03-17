@@ -24,7 +24,7 @@
     opacity: 0;
 }
 .sliderAction{
-    transition: opacity 1s linear 0.5s;
+    transition: opacity 0.5s linear 0.5s;
 }
 .arrow {
     position: absolute;
@@ -49,7 +49,6 @@
     width: 34%;
     height: 10%;
     background-color: RGBA(0, 0, 0, 0.6);
-    border-radius: 5px;
     left: 33%;
 }
 
@@ -59,10 +58,8 @@
     height: 50%;
     border: none;
     outline:medium;
-    border-radius: 5px;
     margin-top: 3.5%;
     padding-left: 2%;
-    font-size: 18px;
 }
 
 .picture_button{
@@ -71,10 +68,6 @@
     outline:medium;
     height: 50%;
     margin-left: 2%;
-    border-radius: 5px;
-    font-size: 18px;
-    background-color: #FF9D00;
-    color: white;
 }
 
 .picture_button{

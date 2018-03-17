@@ -2,83 +2,68 @@
     width: 1360px;
     margin: 0 auto;
 }
-
 .content_all{
     width: 75%;
     height: 1000px;
     margin: 0 auto;
 }
-
 .content_left{
     width: 27%;
     height: 100%;
-    float: left;
 }
-
 .content_traveller{
-    width: 100%;
     height: 30%;
     margin-top: 10%;
 }
-
+.color_white{
+    color: white;
+}
+.color_grey{
+    color: #999999;
+}
 .content_strategy{
-    width: 100%;
     height: 62%;
     margin-top: 9%;
 }
-
 .strategy_one{
-    width: 100%;
-    height: 48%;
+    height: 44%;
     margin-top: 10%;
 }
-
+.strategy_one:hover{
+    transform: scale(1.04);
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s, transform 0.5s;
+    cursor: pointer;
+}
 .content_right{
     width: 70%;
     margin-left: 3%;
-    height: 100%;
-    float: left;
 }
-
 .content_popular{
-    width: 100%;
     height: 30%;
     margin-top: 4%;
 }
-
 .content_travels{
-    width: 100%;
     height: 64%;
     margin-top: 4%;
 }
-
 .traveller_title{
     width: 79%;
-    height: 10%;
-    float: left;
-    font-size: 20px;
+    height: 12%;
 }
-
 .strategy_title{
     width: 79%;
-    height: 5%;
-    float: left;
-    font-size: 20px;
+    height: 2%;
     margin-top: 2%;
 }
-
 .traveller_more{
     width: 21%;
     height: 10%;
-    float: left;
-    color: #999999;
 }
 
 .strategy_more{
     width: 21%;
-    height: 5%;
-    float: left;
-    color: #999999;
+    height: 2%;
 }
 
 .traveller_more:hover{
@@ -95,43 +80,38 @@
 
 .content_strategy img{
     width: 100%;
-    height: 60%;
+    height: 65%;
 }
 
 .content_traveller img{
     width: 100%;
-    height: 60%;
+    height: 70%;
 }
-
+.traveller_all{
+    height: 83%;
+}
+.traveller_all:hover{
+    transform: scale(1.04);
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s, transform 0.5s;
+    cursor: pointer;
+}
 .traveller_name{
-    font-size: 18px;
     margin-top: 2%;
 }
 
 .traveller_intro{
     margin-top: 1%;
-    color: #999999;
 }
-
-.traveller_name:hover{
-    color: #FF9D00;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 .popular_title{
     width: 88%;
-    height: 10%;
-    float: left;
+    height: 12%;
     margin-left: 3%;
-    font-size: 20px;
 }
 
 .popular_more{
     width: 8%;
     height: 10%;
-    float: left;
-    color: #999999;
 }
 
 .popular_more:hover{
@@ -141,66 +121,60 @@
 }
 
 .content_places{
-    width: 100%;
-    height: 100%;
     margin: 0;
-    float: left;
 }
 
 .content_place{
     width: 30%;
     height: 85%;
     margin-left: 3%;
-    float: left;
 }
-
+.content_place:hover{
+    transform: scale(1.04);
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s, transform 0.5s;
+    cursor: pointer;
+}
 .content_place img{
     width: 100%;
     height: 55%;
 }
 
 .travels_title{
-    width: 88%;
-    height: 5%;
-    float: left;
+    width: 80%;
+    height: 6%;
     margin-left: 3%;
-    font-size: 20px;
 }
-
 .travels_more{
-    width: 8%;
+    width: 16%;
     height: 5%;
-    float: left;
-    color: #999999;
+    text-align: center;
+    padding-top: 1%;
 }
-
 .travels_more:hover{
-    color: #FF9D00;
     cursor: pointer;
-    text-decoration: underline;
 }
 
 .travels_all{
     width: 97%;
     height: 91%;
     margin-left: 3%;
-    float: left;
 }
 
 .travels_one{
-    width: 100%;
     height: 30%;
     margin-bottom: 3%;
 }
 
 .travels_one:hover{
-    background-color: #EFEFEF;
+    transform: scale(1.04);
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s, transform 0.5s;
+    cursor: pointer;
 }
 
 .one_picture{
     width: 35%;
-    height: 100%;
-    float: left;
 }
 
 .one_picture img{
@@ -212,37 +186,23 @@
     width: 62%;
     margin-left: 3%;
     height: 20%;
-    float: left;
-    font-size: 18px;
     margin-top: 2%;
 }
-
-.one_title:hover{
-    color: #FF9D00;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 .one_content{
-    float: left;
     height: 50%;
     width: 62%;
     margin-left: 3%;
-    color: #999999;
 }
 
 .one_traveller{
     width: 62%;
     height: 15%;
     margin-left: 3%;
-    float: left;
 }
 
 .one_info{
     width: 30%;
-    height: 100%;
     margin-right: 2%;
-    float: left;
 }
 
 .one_info:hover{
@@ -250,27 +210,16 @@
     cursor: pointer;
     text-decoration: underline;
 }
-
-.writer{
-    color: #FF9D00;
-}
-
 .writer:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 
 .one_button{
-    width: 30%;
-    height: 100%;
+    width: 20%;
     border: none;
     outline:medium;
-    float: left;
-    font-size: 14px;
-    border-radius: 5px;
-    background-color: #FF9D00;
 }
-
 .one_button:hover{
     cursor: pointer;
 }

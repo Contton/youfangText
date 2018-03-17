@@ -9,7 +9,7 @@ import './css/registerCss.css';
 import './css/listCss.css';
 import './css/aboutCss.css';
 import './css/semantic-ui/Semantic-UI-master/dist/semantic.min.css';
-import CommentBox from './homeComponent/CommentBox';
+import CommentBox from './listComponent/CommentBox';
 
 ReactDOM.render(
     <CommentBox/>,

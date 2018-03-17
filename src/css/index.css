@@ -6,3 +6,35 @@ body {
 .box_all{
   width: 100%;
 }
+.width{
+  width: 100%;
+}
+.color_orange{
+  color: #FF9D00;
+}
+.background{
+  background-color: #FF9D00;
+}
+.height{
+  height: 100%;
+}
+.float{
+  float: left;
+}
+.radius{
+  border-radius: 5px;
+}
+.font20{
+  font-size: 20px;
+}
+.font18{
+  font-size: 18px;
+}
+.font_weight{
+  font-weight: bold;
+}
+.overflow{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
