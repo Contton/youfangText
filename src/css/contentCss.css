@@ -12,7 +12,7 @@
     height: 100%;
 }
 .content_traveller{
-    height: 30%;
+    height: 31%;
     margin-top: 10%;
 }
 .color_white{
@@ -44,7 +44,7 @@
     margin-top: 4%;
 }
 .content_travels{
-    height: 64%;
+    height: 62%;
     margin-top: 4%;
 }
 .traveller_title{
@@ -85,10 +85,10 @@
 
 .content_traveller img{
     width: 100%;
-    height: 70%;
+    height: 68%;
 }
 .traveller_all{
-    height: 83%;
+    height: 85%;
 }
 .traveller_all:hover{
     transform: scale(1.04);
@@ -142,7 +142,7 @@
 
 .travels_title{
     width: 80%;
-    height: 6%;
+    height: 7%;
     margin-left: 3%;
 }
 .travels_more{
@@ -157,7 +157,7 @@
 
 .travels_all{
     width: 97%;
-    height: 91%;
+    height: 93%;
     margin-left: 3%;
 }
 

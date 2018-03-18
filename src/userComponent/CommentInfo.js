@@ -82,7 +82,7 @@ class User1 extends React.Component{
                 <div className="name_one width">生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;：&nbsp;&nbsp;&nbsp;<input className="one_date radius" type="date"/></div>
                 <div className="name_one width">现居住地&nbsp;&nbsp;：&nbsp;&nbsp;&nbsp;<input className="one_input radius" type="text"/></div>
                 <div className="name_one width">曾居住地&nbsp;&nbsp;：&nbsp;&nbsp;&nbsp;<input className="one_input radius" type="text"/></div>
-                <div className="name_one width">个性签名&nbsp;&nbsp;：&nbsp;&nbsp;&nbsp;<input className="one_input radius one_person" type="text" placeholder="不得超过35个字"/></div>
+                <div className="name_one width">个性签名&nbsp;&nbsp;：&nbsp;&nbsp;&nbsp;<input className="one_input radius one_person" type="text" placeholder="不得超过55个字"/></div>
             </div>
         );
     }

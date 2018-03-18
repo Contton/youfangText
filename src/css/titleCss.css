@@ -190,3 +190,10 @@
 .login_show{
     opacity: 1;
 }
+.login_hidden{
+    opacity: 0;
+}
+.login_worry{
+    margin-left: 15%;
+    color: red;
+}
