@@ -8,7 +8,7 @@
   * copy homeComponent files from release
   * create commonjs files as index.js for NPM release
   * create release notes that filter only items related to homeComponent
-  * custom package.json file from template
+  * custom traveller.json file from template
   * create bower.json from template
   * create README from template
   * create meteor.js file
@@ -126,7 +126,7 @@ module.exports = function(callback) {
           npm      : component + ' create NPM Module',
           notes    : component + ' create release notes',
           composer : component + ' create composer.json',
-          package  : component + ' create package.json',
+          package  : component + ' create traveller.json',
           meteor   : component + ' create meteor package.js',
         },
         // paths to includable assets
@@ -207,7 +207,7 @@ module.exports = function(callback) {
         ;
       });
 
-      // extend package.json
+      // extend traveller.json
       gulp.task(task.package, false, function() {
         return gulp.src(release.templates.package)
           .pipe(plumber())

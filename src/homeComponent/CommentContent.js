@@ -14,7 +14,7 @@ class Traveller extends React.Component{
     render(){
         return(
             <div className="traveller_all float width">
-                <img src={img1}/>
+                <img src={this.props.traveller.picture}/>
                 <div className="traveller_name font18 color_orange">{this.props.traveller.name}</div>
                 <div className="traveller_intro color_grey">{this.props.traveller.autograph}</div>
             </div>
@@ -25,7 +25,7 @@ class Strategy extends React.Component{
     render(){
         return(
             <div className="strategy_one float width">
-                <img src={img2}/>
+                <img src={this.props.strategy.picture}/>
                 <div className="traveller_name font18 color_orange">{this.props.strategy.name}</div>
                 <div className="traveller_intro color_grey">{this.props.strategy.introduce}</div>
             </div>
@@ -68,20 +68,39 @@ class CommentContent extends React.Component{
             traveller:[],
             strategy:[],
             place:[],
-            article:[]
+            article:[],
+            travellerUrl:"http://localhost:3000/traveller.json",
+            strategyUrl:"http://localhost:3000/strategy.json"
         };
     }
     componentWillMount(){
         this.getInfo();
+        this.getTraveller();
+        this.getStrategy();
+    }
+    getTraveller(){
+        $.ajax({
+            url: this.state.travellerUrl,
+            success: (comments) => {
+                this.setState({traveller:comments});
+            },
+            error: (xhr, status, error) => {
+                console.log(error);
+            }
+        });
+    }
+    getStrategy(){
+        $.ajax({
+            url: this.state.strategyUrl,
+            success: (comments) => {
+                this.setState({strategy:comments});
+            },
+            error: (xhr, status, error) => {
+                console.log(error);
+            }
+        });
     }
     getInfo(){
-        var traveller = "{\"picture\":\"img1\", \"name\":\"佟丽娅\", \"autograph\":\"佟丽娅，1984年8月8日出生于新疆伊犁，踏实、诚恳的演好每一个角色。\"}";
-        var travellerObj = JSON.parse(traveller);
-        this.setState({traveller:travellerObj});
-        var strategy = "[{\"picture\":\"img2\", \"name\":\"洪崖洞1\", \"introduce\":\"11洪崖洞，位于重庆直辖市核心商圈解放碑沧白路，以“吊脚楼”风貌为主体。\"},"
-                        +"{\"picture\":\"img2\", \"name\":\"洪崖洞2\", \"introduce\":\"22洪崖洞，位于重庆直辖市核心商圈解放碑沧白路，以“吊脚楼”风貌为主体。\"}]";
-        var strategyObj = JSON.parse(strategy);
-        this.setState({strategy:strategyObj});
         var place = "[{\"picture\":\"img3\", \"name\":\"钟楼\", \"introduce\":\"西安钟楼位于西安市中心，明城墙内东西南北四条大街的交汇处，是中国现存钟楼中形制最大、保存最完整的一座。\"},"
                     +"{\"picture\":\"img4\", \"name\":\"天安门\", \"introduce\":\"天安门，坐落在中华人民共和国首都北京市的中心，以杰出的建筑艺术和特殊的政治地位为世人所瞩目。\"},"
                     +"{\"picture\":\"img5\", \"name\":\"四面山\", \"introduce\":\"四面山位于重庆市江津区，拥有世界自然遗产“丹霞地貌”特征。位于双凤村的“牛郎织女”“爱情天梯”被评为中国当代十大经典爱情故事。\"}]";
@@ -121,14 +140,14 @@ class CommentContent extends React.Component{
                             </div>
                         </div>
                         <div className="content_travels width">
-                            <div className="travels_title font20 float">热门游记</div>
-                            <div className="travels_more color_white font18 radius float background">写游记</div>
-                            <div className="travels_all float">
-                                <Article article={this.state.article[0]}/>
-                                <Article article={this.state.article[1]}/>
-                                <Article article={this.state.article[2]}/>
-                            </div>
+                        <div className="travels_title font20 float">热门游记</div>
+                        <div className="travels_more color_white font18 radius float background">写游记</div>
+                        <div className="travels_all float">
+                            <Article article={this.state.article[0]}/>
+                            <Article article={this.state.article[1]}/>
+                            <Article article={this.state.article[2]}/>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

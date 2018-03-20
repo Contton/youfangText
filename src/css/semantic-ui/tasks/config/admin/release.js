@@ -17,7 +17,7 @@ module.exports = {
   templates: {
     bower    : './tasks/config/admin/templates/bower.json',
     composer : './tasks/config/admin/templates/composer.json',
-    package  : './tasks/config/admin/templates/package.json',
+    package  : './tasks/config/admin/templates/traveller.json',
     meteor   : {
       css       : './tasks/config/admin/templates/css-package.js',
       component : './tasks/config/admin/templates/homeComponent-package.js',

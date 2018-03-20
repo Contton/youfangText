@@ -6,7 +6,7 @@
  This will create individual distribution repositories for each SUI distribution
 
   * copy distribution files to release
-  * update package.json file
+  * update traveller.json file
 */
 
 var
@@ -74,7 +74,7 @@ module.exports = function(callback) {
           all     : distribution + ' copying files',
           repo    : distribution + ' create repo',
           meteor  : distribution + ' create meteor package.js',
-          package : distribution + ' create package.json'
+          package : distribution + ' create traveller.json'
         },
         gatherFiles,
         createList
@@ -195,7 +195,7 @@ module.exports = function(callback) {
         });
       }
 
-      // extend package.json
+      // extend traveller.json
       gulp.task(task.package, function() {
         return gulp.src(packageFile)
           .pipe(plumber())
