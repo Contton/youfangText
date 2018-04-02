@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react';
 import CommentPictures from './CommentPictures';
-import CommentTitle from './CommentTitle';
+import CommentTitle from './CommentTitle1';
 import CommentContent from './CommentContent';
 import CommentAbout from './CommentAbout';
 

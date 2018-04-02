@@ -50,10 +50,6 @@ class CommentList extends React.Component{
         return(
             <div className="list">
                 <div className="list_all">
-                    <div className="list_find radius">
-                        <input className="list_input font18 height" type="text" placeholder="请输入要搜索的大学名称"/>
-                        <input type="submit" className="list_submit height background font18 color_white" value="搜索"/>
-                    </div>
                     <OneContent list={this.state.list[0]}/>
                     <OneContent list={this.state.list[1]}/>
                     <OneContent list={this.state.list[2]}/>

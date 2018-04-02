@@ -7,7 +7,7 @@ import img3 from '../images/3.jpg';
 import img4 from '../images/4.jpg';
 import classNames from 'classnames/bind';
 
-import styles from '../css/titleCss.css';
+import styles from '../css/title1Css.css';
 
 let style = classNames.bind(styles);
 

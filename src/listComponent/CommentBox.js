@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react';
 import CommentList from './CommentList';
-import CommentTitle from '../homeComponent/CommentTitle';
+import CommentTitle from '../homeComponent/CommentTitle2';
 import CommentAbout from '../homeComponent/CommentAbout';
 
 class CommentBox extends React.Component{

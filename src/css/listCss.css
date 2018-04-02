@@ -6,29 +6,6 @@
     width: 80%;
     margin: auto;
 }
-.list_find{
-    width: 50%;
-    height: 50px;
-    margin-top: 20px;
-    margin-left: 25%;
-}
-.list_input{
-    width: 80%;
-    outline: none;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    padding-left: 25px;
-    background-color: #EFEFEF;
-}
-.list_submit{
-    width: 20%;
-    outline: none;
-    border: none;
-    border-radius: 0 5px 5px 0;
-}
-.list_submit:hover{
-    cursor: pointer;
-}
 .list_one{
     margin-top: 30px;
     border: 1px solid #EFEFEF;

@@ -1,0 +1,39 @@
+.title2_all{
+    height: 58px;
+    font-family: '微软雅黑';
+    font-size: 16px;
+    width: 100%;
+    background-color: #3c3c3c;
+}
+.title2_all img{
+    float: left;
+    margin-left: 2%;
+}
+.list_find{
+    width: 25%;
+    height: 60%;
+    margin-top: 10px;
+    margin-left: 3%;
+}
+.list_input{
+    width: 80%;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding-left: 25px;
+    font-size: 14px;
+}
+.list_submit{
+    width: 20%;
+    outline: none;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 15px;
+}
+.list_submit:hover{
+    cursor: pointer;
+}
+.title2_login{
+    float: right;
+    margin-right: 2%;
+}

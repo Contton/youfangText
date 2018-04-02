@@ -27,6 +27,9 @@ body {
 .float{
   float: left;
 }
+.right{
+  float: right;
+}
 .radius{
   border-radius: 5px;
 }

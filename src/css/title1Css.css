@@ -7,31 +7,35 @@
 .title_logo{
     height: 58px;
     float: left;
-    margin-left: 21%;
+    margin-left: 22%;
 }
-
-.title_login{
+.display_none{
+    display: none;
+}
+.display_inline{
+    display: inline;
+}
+.title1_login{
     margin-left: 73%;
 }
-
+.title_center{
+    margin-left: 60%;
+}
 .title_login div{
     float: left;
     line-height: 58px;
     font-size: 14px;
 }
-
 .title_login div:hover{
     text-decoration: underline;
     cursor: pointer;
     color: #FF9D00;
 }
-
 .title_login span{
     float: left;
     line-height: 58px;
     font-size: 14px;
 }
-
 .headerFirst{
     margin-left: 2%;
 }
@@ -106,12 +110,10 @@
     transition:width 1s;
     background-color: #EFEFEF;
 }
-
 .none{
     width: 0%;
     background-color: white;
 }
-
 .login{
     position: fixed;
     width: 100%;
@@ -190,7 +192,6 @@
     background-color: #FF9D00;
     margin-right: 15%;
 }
-
 .login_show{
     opacity: 1;
 }

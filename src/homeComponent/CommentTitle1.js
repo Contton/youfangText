@@ -4,7 +4,7 @@ import img13 from '../images/13.jpg';
 import img14 from '../images/14.jpg';
 import classNames from 'classnames/bind';
 
-import styles from '../css/titleCss.css';
+import styles from '../css/title1Css.css';
 
 let style = classNames.bind(styles);
 
@@ -33,6 +33,8 @@ class ComponentTitle extends Component {
     }
     loginChange(change,event){
         this.setState({login : change === 1 ? 1 : 0});
+        this.setState({userName:'', userPass:''});
+        this.setState({worryName:0, worryPass:0});
     }
     checkUser(type,event){
         this.setState({worryName:0});
@@ -49,10 +51,20 @@ class ComponentTitle extends Component {
             this.setState({worryName:0});
             this.setState({worryPass:1});
         }else{
-            this.setState({login: 0});
+            this.setState({login: 2});
             this.setState({worryName:0});
             this.setState({worryPass:0});
         }
+    }
+    dealCenter(){
+        if(this.state.login === 0){
+            return <div className="title_login title1_login"><div onClick={this.loginChange.bind(this,1)}>登录</div><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><div>注册</div></div>;
+        }else if(this.state.login === 2){
+            return <div className="title_login title_center"><span>{this.state.userName}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><div>个人中心</div><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><div onClick={this.exit.bind(this)}>[退出]</div></div>;
+        }
+    }
+    exit(){
+        this.setState({login: 0});
     }
     render() {
         let findShow = style({
@@ -110,7 +122,7 @@ class ComponentTitle extends Component {
                     <div className="title_button float"><img src={img14}/></div>
                     <input className={this.state.find === 1 ? findShow : findHidden} type="text"/>
                 </div>
-                <div className="title_login"><div onClick={this.loginChange.bind(this,1)}>登录</div><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><div>注册</div></div>
+                {this.dealCenter()}
                 <div className={this.state.login === 1 ? backShow : backHidden}></div>
                 <div className={this.state.login === 1 ? loginShow : loginHidden}>
                     <div className="login_title">登录</div>
