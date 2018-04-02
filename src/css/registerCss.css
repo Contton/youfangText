@@ -7,11 +7,19 @@
 .register_info{
     width: 450px;
     margin-left: 65%;
-    height: 55%;
+    height: 60%;
     margin-top: 10%;
-    background-color: RGBA(0, 0, 0, 0.5);
+    background-color: RGBA(0, 0, 0, 0.8);
     float: left;
     border-radius: 5px;
+}
+.register_title{
+    width: 80%;
+    margin-left: 10%;
+    color: #FF9D00;
+    border-bottom: 1px solid #999999;
+    margin-top: 7%;
+    height: 30px;
 }
 .register_total{
     width: 70%;
@@ -20,28 +28,19 @@
     -moz-appearance: none;
     border-radius: 5px;
     margin-left: 15%;
-    border: 1px solid #F9EBE2;
-    background-color: #F9EBE2;
-    color: #354857;
+    background-color: #EFEFEF;
     outline:medium;
 }
 .register_phone{
-    margin-top: 50px;
+    margin-top: 30px;
     padding-left: 2%;
 }
 .register_get{
-    border: 1px solid #FF9D00;
     background-color: #FF9D00;
-    color: #354857;
     margin-top: 30px;
     color: white;
 }
 .register_check{
     margin-top: 30px;
     padding-left: 2%;
-}
-.register_get:hover{
-    border: 1px solid #dc8800;
-    background-color: #dc8800;
-    cursor: pointer;
 }

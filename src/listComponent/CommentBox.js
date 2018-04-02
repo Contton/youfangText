@@ -2,6 +2,7 @@
 import React from 'react';
 import CommentList from './CommentList';
 import CommentTitle from '../homeComponent/CommentTitle';
+import CommentAbout from '../homeComponent/CommentAbout';
 
 class CommentBox extends React.Component{
     render(){
@@ -9,6 +10,7 @@ class CommentBox extends React.Component{
             <div>
                 <CommentTitle/>
                 <CommentList/>
+                <CommentAbout/>
             </div>
         );
     }

@@ -18,55 +18,56 @@ class ComponentTitle extends Component {
             login:0,
             userName:'',
             userPass:'',
-            worry:0
+            worryPass:0,
+            worryName:0
         };
     }
-
     changeClicked(index){
         this.setState({clicked:index});
     }
-
     changeMouserOver(index){
         this.setState({mouse_over:index});
     }
-
-    findShow(){
-       this.setState({find:1});
+    findChange(change,event){
+        this.setState({find : change === 1 ? 1 : 0});
     }
-    findHidden(){
-        this.setState({find:0});
-    }
-    loginOpen(){
-        this.setState({login:1});
-    }
-    loginClose(){
-        this.setState({login:0});
+    loginChange(change,event){
+        this.setState({login : change === 1 ? 1 : 0});
     }
     checkUser(type,event){
+        this.setState({worryName:0});
+        this.setState({worryPass:0});
         if(type === 'name')
             this.setState({userName:event.target.value});
         if(type === 'pass')
             this.setState({userPass:event.target.value});
     }
     dealLogin(){
-        if(this.state.userName === '1234' && this.state.userPass === '1234') {
+        if(this.state.userName !== '1234') {
+            this.setState({worryName: 1});
+        }else if(this.state.userName === '1234' && this.state.userPass !== '1234'){
+            this.setState({worryName:0});
+            this.setState({worryPass:1});
+        }else{
             this.setState({login: 0});
-            this.setState({worry:0});
-        }
-        else{
-            this.setState({worry:1});
+            this.setState({worryName:0});
+            this.setState({worryPass:0});
         }
     }
     render() {
-        let show = style({
+        let findShow = style({
             title_input:true,
             inline:true,
             none:false,
+            float:true,
+            radius:true
         });
-        let hidden = style({
+        let findHidden = style({
             inline:false,
             title_input:true,
             none:true,
+            float:true,
+            radius:true
         })
         let loginShow = style({
             login_show:true,
@@ -105,18 +106,20 @@ class ComponentTitle extends Component {
                     旅游攻略</HerderSelect>
                 <HerderSelect index="5" changeMouserOver={this.changeMouserOver.bind(this)} changeClicked={this.changeClicked.bind(this)} selected={this.state.clicked} mouse_over={this.state.mouse_over} left={true} end={true}>
                     游记</HerderSelect>
-                <div className="title_find" onMouseOver={this.findShow.bind(this)} onMouseOut={this.findHidden.bind(this)}>
-                    <div className="title_button"><img src={img14}/></div>
-                    <input className={this.state.find === 1 ? show : hidden} type="text"/>
+                <div className="title_find float" onMouseOver={this.findChange.bind(this,1)} onMouseOut={this.findChange.bind(this,0)}>
+                    <div className="title_button float"><img src={img14}/></div>
+                    <input className={this.state.find === 1 ? findShow : findHidden} type="text"/>
                 </div>
-                <div className="title_login"><div onClick={this.loginOpen.bind(this)}>登录</div><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><div>注册</div></div>
+                <div className="title_login"><div onClick={this.loginChange.bind(this,1)}>登录</div><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><div>注册</div></div>
                 <div className={this.state.login === 1 ? backShow : backHidden}></div>
                 <div className={this.state.login === 1 ? loginShow : loginHidden}>
+                    <div className="login_title">登录</div>
                     <input className="login_text" type="text" value={this.state.userName} placeholder="请输入邮箱/电话" onChange={this.checkUser.bind(this,'name')}/>
+                    <div className={this.state.worryName === 1 ? worryShow : worryHidden}>账号不存在!</div>
                     <input className="login_text" type="password" placeholder="请输入密码" onChange={this.checkUser.bind(this,'pass')}/>
-                    <div className={this.state.worry === 1 ? worryShow : worryHidden}>密码错误</div>
+                    <div className={this.state.worryPass === 1 ? worryShow : worryHidden}>密码错误!</div>
                     <div className="login_forget">忘记密码？</div>
-                    <input onClick={this.loginClose.bind(this)} className="login_button" type="button" value="关闭"/>
+                    <input onClick={this.loginChange.bind(this,0)} className="login_button" type="button" value="关闭"/>
                     <input className="login_button login_ok" type="button" onClick={this.dealLogin.bind(this)} value="登录"/>
                 </div>
             </div>

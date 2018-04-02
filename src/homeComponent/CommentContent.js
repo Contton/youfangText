@@ -1,13 +1,5 @@
 'use strict'
 import React from 'react';
-import img1 from '../images/1.jpg';
-import img2 from '../images/2.jpg';
-import img3 from '../images/3.jpg';
-import img4 from '../images/4.jpg';
-import img5 from '../images/5.jpg';
-import img6 from '../images/6.jpg';
-import img7 from '../images/7.jpg';
-import img8 from '../images/8.jpg';
 import $ from 'jquery';
 
 class Traveller extends React.Component{
@@ -36,7 +28,7 @@ class Place extends React.Component{
     render(){
         return(
             <div className="content_place float">
-                <img src={img3}/>
+                <img src={this.props.place.picture}/>
                 <div className="traveller_name font18 color_orange">{this.props.place.name}</div>
                 <div className="traveller_intro color_grey">{this.props.place.introduce}</div>
             </div>
@@ -47,7 +39,7 @@ class Article extends React.Component{
     render(){
         return(
             <div className="travels_one width">
-                <div className="one_picture float height"><img src={img6}/></div>
+                <div className="one_picture float height"><img src={this.props.article.picture}/></div>
                 <div className="one_title font18 float color_orange">{this.props.article.title}</div>
                 <div className="one_content color_grey float">{this.props.article.content}</div>
                 <div className="one_traveller float">
@@ -70,17 +62,21 @@ class CommentContent extends React.Component{
             place:[],
             article:[],
             travellerUrl:"http://localhost:3000/traveller.json",
-            strategyUrl:"http://localhost:3000/strategy.json"
+            strategyUrl:"http://localhost:3000/strategy.json",
+            placeUrl:"http://localhost:3000/place.json",
+            articleUrl:"http://localhost:3000/article.json",
         };
     }
     componentWillMount(){
-        this.getInfo();
         this.getTraveller();
         this.getStrategy();
+        this.getPlace();
+        this.getArticle();
     }
     getTraveller(){
         $.ajax({
             url: this.state.travellerUrl,
+            async: false,
             success: (comments) => {
                 this.setState({traveller:comments});
             },
@@ -92,6 +88,7 @@ class CommentContent extends React.Component{
     getStrategy(){
         $.ajax({
             url: this.state.strategyUrl,
+            async: false,
             success: (comments) => {
                 this.setState({strategy:comments});
             },
@@ -100,17 +97,29 @@ class CommentContent extends React.Component{
             }
         });
     }
-    getInfo(){
-        var place = "[{\"picture\":\"img3\", \"name\":\"钟楼\", \"introduce\":\"西安钟楼位于西安市中心，明城墙内东西南北四条大街的交汇处，是中国现存钟楼中形制最大、保存最完整的一座。\"},"
-                    +"{\"picture\":\"img4\", \"name\":\"天安门\", \"introduce\":\"天安门，坐落在中华人民共和国首都北京市的中心，以杰出的建筑艺术和特殊的政治地位为世人所瞩目。\"},"
-                    +"{\"picture\":\"img5\", \"name\":\"四面山\", \"introduce\":\"四面山位于重庆市江津区，拥有世界自然遗产“丹霞地貌”特征。位于双凤村的“牛郎织女”“爱情天梯”被评为中国当代十大经典爱情故事。\"}]";
-        var placeObj = JSON.parse(place);
-        this.setState({place:placeObj});
-        var article = "[{\"picture\":\"img6\", \"title\":\"沁心之蓝，漫步“费城”@土耳其费特希耶\", \"content\":\"此“费城”非彼费城。这里说的“费城”并不是美国著名的费城，而是土耳其南部一个名叫费特希耶（Fethiye）的小镇。 一个“死海”边上的，蓝的沁人心脾的小镇。离开费特希耶，久久不能忘记。\", \"place\":\"费特希耶\", \"author\":\"作者\"},"
-                        +"{\"picture\":\"img7\", \"title\":\"日本·北海道 | 赴一场北国春樱之宴\", \"content\":\"“旅游之前，先上马蜂窝”。 新Slogan喊得如此响亮，死忠粉儿当然要po一篇应季干货以表支持咯！（尽管是时隔近一年的存货 如果已经预定了三四月份 关东 、 关西 的赏樱行程。\", \"place\":\"北海道\", \"author\":\"作者\"},"
-                        +"{\"picture\":\"img8\", \"title\":\"【慕容游记】云南行（10）七彩云南\", \"content\":\"“七天的 云南 之行，自然是少不了去“七彩 云南 ”。这是为什么呢（读niang）? 这不仅仅是因为导游有利益的因素，凭心而论，也确是购买 云南 特产的最佳首选之地（注：今年一月份再一次去 云南）\", \"place\":\"昆明\", \"author\":\"作者\"}]";
-        var articleObj = JSON.parse(article);
-        this.setState({article:articleObj});
+    getPlace(){
+        $.ajax({
+            url: this.state.placeUrl,
+            async: false,
+            success: (comments) => {
+                this.setState({place:comments});
+            },
+            error: (xhr, status, error) => {
+                console.log(error);
+            }
+        });
+    }
+    getArticle(){
+        $.ajax({
+            url: this.state.articleUrl,
+            async: false,
+            success: (comments) => {
+                this.setState({article:comments});
+            },
+            error: (xhr, status, error) => {
+                console.log(error);
+            }
+        });
     }
     render(){
         return(
@@ -119,7 +128,7 @@ class CommentContent extends React.Component{
                     <div className="content_left float">
                         <div className="content_traveller width">
                             <div className="traveller_title font20 float">热门博主</div>
-                            <div className="traveller_more color_white float">更多博主</div>
+                            <div className="traveller_more color_grey float">更多博主</div>
                             <Traveller traveller={this.state.traveller}/>
                         </div>
                         <div className="content_strategy width">

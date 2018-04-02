@@ -1,12 +1,11 @@
 .headerBody{
-    height: 66px;
+    height: 58px;
     font-family: '微软雅黑';
     font-size: 16px;
-
 }
 
 .title_logo{
-    height: 66px;
+    height: 58px;
     float: left;
     margin-left: 21%;
 }
@@ -17,7 +16,7 @@
 
 .title_login div{
     float: left;
-    line-height: 66px;
+    line-height: 58px;
     font-size: 14px;
 }
 
@@ -29,7 +28,7 @@
 
 .title_login span{
     float: left;
-    line-height: 66px;
+    line-height: 58px;
     font-size: 14px;
 }
 
@@ -54,8 +53,8 @@
     display: -webkit-flex; /* Safari */
     align-items:center;/*指定垂直居中*/
     padding: 15px;
-    height: 66px;
-    border-bottom:2px solid #fff;
+    height: 58px;
+    border-bottom:2px solid white;
 }
 
 .onclickStyle{
@@ -71,12 +70,11 @@
 }
 
 .outStyle{
-    border-bottom:3px solid #fff;
-    color:#333333
+    border-bottom:3px solid white;
+    color: #3c3c3c;
 }
 .title_find{
-    line-height: 66px;
-    float: left;
+    line-height: 58px;
     width: 15%;
     margin-top: 0.4%;
 }
@@ -85,17 +83,14 @@
     border: none;
     outline:medium;
     height: 30px;
-    float: left;
-    border-radius: 5px;
     font-size: 14px;
     padding-left: 4%;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 .title_button{
     width: 30%;
     height: 30px;
-    float: left;
 }
 
 .title_button img{
@@ -121,31 +116,39 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: RGBA(255, 255, 255, 0.4);
+    background-color: RGBA(0, 0, 0, 0.8);
     z-index: 3;
 }
-
 .login_all{
     width: 26%;
-    height: 30%;
-    background-color: white;
+    height: 40%;
+    background-color: RGBA(0, 0, 0, 0.8);
     position: fixed;
-    top: 35%;
+    top: 30%;
     left: 37%;
     z-index: 4;
     border-radius: 5px;
     padding-top: 1%;
     opacity: 0;
 }
-
+.login_title{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    height: 10%;
+    font-size: 25px;
+    border-bottom: 1px solid #EFEFEF;
+    margin-bottom: 4%;
+    color: #FF9D00;
+}
 .login_text{
     border: none;
     outline:medium;
     background-color: #EFEFEF;
     width: 70%;
     margin-left: 15%;
-    height: 20%;
-    margin-top: 5%;
+    height: 15%;
+    margin-top: 3%;
     border-radius: 5px;
     padding-left: 3%;
 }
@@ -153,17 +156,17 @@
 .login_forget{
     width: 20%;
     line-height: 15%;
-    height: 15%;
+    height: 5%;
     margin-left: 15%;
     float: left;
     margin-top: 5%;
     padding-top: 4%;
     font-size: 14px;
+    color: #FF9D00;
 }
 
 .login_forget:hover{
     text-decoration: underline;
-    color: #FF9D00;
     cursor: pointer;
 }
 
@@ -171,11 +174,12 @@
     border: none;
     outline:medium;
     width: 20%;
-    height: 15%;
+    height: 10%;
     margin-top: 5%;
     margin-left: 5%;
     border-radius: 5px;
     float: left;
+    background-color: #999999;
 }
 
 .login_button:hover{
@@ -195,5 +199,5 @@
 }
 .login_worry{
     margin-left: 15%;
-    color: red;
+    color: #FF9D00;
 }

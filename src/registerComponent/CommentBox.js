@@ -6,6 +6,7 @@ class CommentBox extends React.Component{
         return(
             <div className="register">
                     <div className="register_info">
+                        <div className="register_title font20">注册</div>
                         <form>
                             <input type="text" className="register_phone register_total" placeholder="请输入你的手机号"/>
                             <button type="button" className="register_get register_total">获取验证码</button>

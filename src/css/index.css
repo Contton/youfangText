@@ -12,6 +12,12 @@ body {
 .color_orange{
   color: #FF9D00;
 }
+.color_white{
+  color: white;
+}
+.color_grey{
+  color: #999999;
+}
 .background{
   background-color: #FF9D00;
 }

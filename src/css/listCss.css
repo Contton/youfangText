@@ -4,7 +4,6 @@
 }
 .list_all{
     width: 80%;
-    height: 1000px;
     margin: auto;
 }
 .list_find{
@@ -35,9 +34,7 @@
     border: 1px solid #EFEFEF;
 }
 .list_one:hover{
-    transform: scale(1.04);
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.5s, transform 0.5s;
+    box-shadow: 0 0 5px 1px #999999;
     cursor: pointer;
 }
 .list_title{
@@ -66,4 +63,29 @@
     height: 30px;
     margin-top: 3px;
     margin-left: 3%;
+}
+.list_page{
+    width: 50%;
+    margin-left: 25%;
+    height: 50px;
+    margin-top: 20px;
+}
+.page_button{
+    width: 20%;
+    border: none;
+    outline:medium;
+    font-size: 14px;
+    border: 1px solid #EFEFEF;
+    background-color: white;
+}
+.page_button:hover{
+    color: #FF9D00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.page_number{
+    width: 20%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
 }
